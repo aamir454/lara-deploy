@@ -1,7 +1,6 @@
 # docker-compose-laravel
-A pretty simplified Docker Compose workflow that sets up a LEMP network of containers for local Laravel development. You can view the full article that inspired this repo [here](https://dev.to/aschmelyun/the-beauty-of-docker-for-local-laravel-development-13c0).
+A pretty simplified Docker Compose workflow that sets up a LEMP network of containers for local Laravel development.
 
-[![GitNFT](https://img.shields.io/badge/%F0%9F%94%AE-Open%20in%20GitNFT-darkviolet?style=flat)](https://gitnft.quine.sh/app/commits/list/repo/docker-compose-laravel)
 
 ## Usage
 
@@ -17,7 +16,8 @@ Bringing up the Docker Compose network with `site` instead of just using `up`, e
 - **mysql** - `:3306`
 - **php** - `:9000`
 - **redis** - `:6379`
-- **mailhog** - `:8025` 
+- **mailhog** - `:8025`
+- **phpmyadmin** - `:81` 
 
 Three additional containers are included that handle Composer, NPM, and Artisan commands *without* having to have these platforms installed on your local computer. Use the following command examples from your project root, modifying them to fit your particular use case.
 
@@ -73,3 +73,7 @@ That should keep a small info pane open in your terminal (which you can exit wit
 The current version of Laravel (8 as of today) uses MailHog as the default application for testing email sending and general SMTP work during local development. Using the provided Docker Hub image, getting an instance set up and ready is simple and straight-forward. The service is included in the `docker-compose.yml` file, and spins up alongside the webserver and database services.
 
 To see the dashboard and view any emails coming through the system, visit [localhost:8025](http://localhost:8025) after running `docker-compose up -d site`.
+
+## phpmyadmin
+The current version of server the purpose of access and upload / backups of mysql database,
+To see the dashboard and view any emails coming through the system, visit [localhost:81](http://localhost:81) after running `docker-compose up -d site`.

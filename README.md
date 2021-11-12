@@ -86,6 +86,7 @@ To see the dashboard and view any emails coming through the system, visit [local
 - `docker container rm <container_name`
 - `docker image rm <image_name`
 - `docker-compose -f docker-compose.yml up --build`
-- `docker-compose run composer fund --ignore-platform-reqs`
+- `docker-compose run composer install`
 - `docker-compose exec php php /var/www/html/artisan migrate`
 - `mysql -u root -p DBNAME <dbBACKUP.sql`  #  Under the mysql container
+- `docker-compose run artisan cache:clear`
